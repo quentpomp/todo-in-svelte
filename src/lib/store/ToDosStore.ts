@@ -1,17 +1,14 @@
 import { v4 as uuidv4 } from "uuid";
 import { writable } from "svelte/store";
 import { browser } from "$app/environment";
+import type { Todo } from "./types";
 
 const data = browser ? JSON.parse(window.localStorage.getItem('st-todo-list') || "[]") ?? [] : [];
 console.log("data", data)
 
 export const todos = writable(data)
 
-type Todo = {
-    id: string,
-    text: string,
-    complete: boolean
-}
+
 
 todos.subscribe((val) => {
     if (browser) {

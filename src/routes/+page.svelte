@@ -1,5 +1,6 @@
 <script>
     import AddTodoSection from "../lib/components/todos/todo/AddTodoSection.svelte";
+    import TodoSection from "../lib/components/todos/todo/TodoSection.svelte";
 </script>
 
 <div class="min-h-screen bg-olive-one selection:bg-green-two md:py-24 md:px-8">
@@ -7,6 +8,7 @@
         <h1 class='2xl font-bold text-gray-three'>Dashboard</h1>
         <div class="mt-10">
             <AddTodoSection />
+            <TodoSection />
         </div>
     </main>
 </div>
